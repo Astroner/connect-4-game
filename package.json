@@ -1,0 +1,36 @@
+{
+  "private": true,
+  "description": "",
+  "scripts": {
+    "dev:client": "parcel src/index.html",
+    "dev:server": "ts-node src/server/index.ts",
+    "build:client": "parcel build --dist-dir=out/client src/index.html",
+    "build:server": "tsc --outDir out/server --esModuleInterop src/server/*.ts",
+    "build": "npm run build:server && npm run build:client",
+    "start": "node out/server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/ws": "^8.5.10",
+    "parcel": "^2.12.0",
+    "postcss": "^8.4.38",
+    "postcss-modules": "^4.3.1",
+    "process": "^0.11.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "normalize.css": "^8.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "ws": "^8.17.0"
+  }
+}
