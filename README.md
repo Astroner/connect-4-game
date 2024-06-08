@@ -1,7 +1,7 @@
 ## Hi there
 This is p2p "Connect 4" game
 
-## Host to start the app
+## How to start the app
 ### Docker
 ```sh
 docker image build -t connect-4 .
@@ -30,3 +30,8 @@ This version of the game was created in **8h 22m**
 ## To do
  - Reconnects
  - Overall code style improvement. Move from "speedrun" style to normal one.
+
+## Envs
+This game has several envs:
+ - PORT - server port
+ - GAMES_LIMIT - max number of rooms
