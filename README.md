@@ -25,7 +25,7 @@ Then open *http://localhost:8080/*
  - Play "Connect 4"
 
 ## Time
-This version of the game was created in **8h 22m**
+This version of the game was created in **8h 26m**
 
 ## To do
  - Reconnects

@@ -22,7 +22,7 @@ export type Subscription = {
 export class Game {
     private listeners = new Set<GameEventHandler>();
 
-    private freeCells = 7 * 7;
+    private freeCells = 7 * 6;
     private grid: Player[][] = new Array(7)
         .fill(null)
         .map(() => new Array())
@@ -36,7 +36,7 @@ export class Game {
 
         const col = this.grid[columnIndex];
 
-        if(col.length === 7) {
+        if(col.length === 6) {
             return;
         }
         

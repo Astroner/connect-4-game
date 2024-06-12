@@ -55,13 +55,13 @@ export const App: FC<AppProps> = memo(props => {
     const [roomCode, setRoomCode] = useState("");
     const [isMyTurn, setIsMyTurn] = useState(false);
     const [gameGrid, setGameGrid] = useState<StoneView[][]>(() => {
-        return new Array(7).fill(null).map(() => new Array(7).fill(null));
+        return new Array(7).fill(null).map(() => new Array(6).fill(null));
     })
     const [gameOver, setGameOver] = useState<GameOver>(null);
     const [isGameOverHidden, setIsGameOverHidden] = useState(false);
 
     const resetGame = (myTurn: Player, game: RemoteGame) => {
-        setGameGrid(new Array(7).fill(null).map(() => new Array(7).fill(null)));
+        setGameGrid(new Array(7).fill(null).map(() => new Array(6).fill(null)));
         setStage({
             type: "GAME",
             game,
@@ -162,7 +162,7 @@ export const App: FC<AppProps> = memo(props => {
 
                         next[e.col] = next[e.col].slice(0);
 
-                        next[e.col][6 - e.row] = e.player === stage.myTurn ? "MY" : "ENEMY";
+                        next[e.col][5 - e.row] = e.player === stage.myTurn ? "MY" : "ENEMY";
 
                         return next;
                     })
